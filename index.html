@@ -419,6 +419,34 @@
         .guest-text a:hover {
             text-decoration: underline;
         }
+
+        /* Gallery Section Styles */
+        .gallery-section {
+            padding: 50px 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .gallery-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -489,7 +517,7 @@
                     <div class="guest-item">
                         <img class="guest-photo" src="static/vishnu.jpeg" alt="Founder of JarvisLabs.ai">
                         <div class="guest-text">
-                            <h4>VISHNU SUBRAMANIAN</h4>
+                            <h4>Chief Guest: Founder of JarvisLabs.ai</h4>
                             <p>We are honored to welcome the founder of <a href="https://www.jarvislabs.ai" target="_blank">Jarvislabs.ai</a>, a leader in affordable GPU cloud platforms for AI. An active AI researcher and former CTO of a travel startup, he has helped many companies build AI solutions.</p>
                             <p>Visit his <a href="https://www.youtube.com/channel/UCDXgtQh9Kz6pG5rKwB3KZcg" target="_blank">YouTube channel</a> for insights into deep learning.</p>
                         </div>
@@ -499,8 +527,8 @@
                     <div class="guest-item">
                         <img class="guest-photo" src="static/siddarth.jpg" alt="Siddarth, the Product Guy">
                         <div class="guest-text">
-                            <h4>SIDDARTH KENGADARAN</h4>
-                            <p>He've spent over ten years immersed in product development, navigating the exciting journey from initial spark to successful launch and beyond. I've worked across diverse industries, gaining a deep understanding of what it takes to build products that users truly love.</p>
+                            <h4>Chief Guest: Siddarth, the Product Guy</h4>
+                            <p>I've spent over ten years immersed in product development, navigating the exciting journey from initial spark to successful launch and beyond. I've worked across diverse industries, gaining a deep understanding of what it takes to build products that users truly love.</p>
                             <p>Visit his page at <a href="https://theproductguy.xyz/" target="_blank">theproductguy.xyz</a> for more information.</p>
                         </div>
                     </div>
@@ -553,6 +581,24 @@
                             <p>Plan and execute coding workshops effortlessly.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="text-uppercase text-center">Gallery</h2>
+            <div class="row">
+                <div class="col-md-4 gallery-item" data-aos="fade-up">
+                    <img src="static/10.JPG" alt="Gallery Image 1" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="static/11.JPG" alt="Gallery Image 2" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="static/12.JPG" alt="Gallery Image 3" class="img-fluid">
                 </div>
             </div>
         </div>
