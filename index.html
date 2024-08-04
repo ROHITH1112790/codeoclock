@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="css/clock.css"> <!-- Ensure the path to the CSS file is correct -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"> <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"> <!-- AOS CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif; /* Updated font-family */
             background-color: #000; /* Ensure background is black */
             color: #fff; /* Ensure text is white */
             padding-top: 80.5px; /* Adjust padding to avoid content being hidden behind fixed navbar */
         }
 
         header .logo img {
-            height: 60px; /* Increase logo size by 20% */
+            height: 90px; /* Increase logo size by 20% */
         }
 
         .navbar {
@@ -101,6 +102,7 @@
 
         .hero h1 {
             font-size: 3em;
+            font-family: 'Roboto', sans-serif; /* Updated font-family */
             margin: 0;
         }
 
@@ -248,6 +250,7 @@
             background-color: #000;
             color: #fff;
             padding: 50px 0;
+            text-align: center; /* Center align text in the footer */
         }
 
         .footer h3,
@@ -277,11 +280,13 @@
 
         .footer .footer-content .social-links {
             display: flex;
-            align-items: center;
+            justify-content: center; /* Center align social links */
+            width: 100%; /* Ensure full width for proper centering */
+            margin-top: 20px; /* Add spacing between sections */
         }
 
         .footer .footer-content .social-links a {
-            margin-left: 15px;
+            margin: 0 10px;
             font-size: 1.5rem;
             transition: color 0.3s;
         }
@@ -293,6 +298,7 @@
         .footer .footer-content .menu,
         .footer .footer-content .contact-info {
             flex: 1;
+            text-align: center; /* Center align menu and contact info */
         }
 
         .footer .footer-content .menu ul,
@@ -311,19 +317,17 @@
             margin-bottom: 10px;
         }
 
-        .footer .footer-content > div {
-            text-align: left;
-        }
-
         .footer .footer-content h4 {
             margin-bottom: 10px;
         }
 
         .footer .footer-content .logo-title {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center; /* Center align logo title */
             width: 100%;
+            text-align: center; /* Center align text */
         }
 
         @media (max-width: 768px) {
@@ -349,6 +353,10 @@
             .footer .footer-content .menu ul li {
                 width: auto;
             }
+
+            .footer {
+                padding-bottom: 20px; /* Ensure there is no extra black part */
+            }
         }
 
         /* Chief Guest Spotlight Section Styles */
@@ -362,8 +370,20 @@
 
         .chief-guest-section h2 {
             font-size: 2.5em;
+            font-family: 'Roboto', sans-serif; /* Updated font-family */
             margin-bottom: 20px;
             color: #fff; /* Text color set to white */
+            position: relative; /* Required for the line */
+        }
+
+        .chief-guest-section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #f0ad4e;
+            margin: 10px auto;
+            border-radius: 2px;
         }
 
         .guest-item {
@@ -429,8 +449,20 @@
 
         .gallery-section h2 {
             text-align: center;
+            font-family: 'Roboto', sans-serif; /* Updated font-family */
             margin-bottom: 40px;
             color: #fff;
+            position: relative; /* Required for the line */
+        }
+
+        .gallery-section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #f0ad4e;
+            margin: 10px auto;
+            border-radius: 2px;
         }
 
         .gallery-item {
@@ -447,16 +479,67 @@
         .gallery-item:hover img {
             transform: scale(1.1);
         }
+
+        /* Styles for mobile navigation menu */
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                position: absolute;
+                top: 80px; /* Adjust to align with your header */
+                right: 0;
+                width: 200px; /* Adjust the width as needed */
+                background-color: #333;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+                display: none; /* Initially hide the menu */
+            }
+
+            .navbar-collapse.show {
+                display: block; /* Show the menu when toggler is clicked */
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+
+            .navbar-nav .nav-item {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Add the line under other section headers */
+        .events h2,
+        .empowering-coders h2,
+        .chief-guest-section h2,
+        .gallery-section h2,
+        .contact-section h2 {
+            position: relative; /* Required for the line */
+        }
+
+        .events h2::after,
+        .empowering-coders h2::after,
+        .chief-guest-section h2::after,
+        .gallery-section h2::after,
+        .contact-section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #f0ad4e;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
     </style>
 </head>
 <body>
     <header class="bg-dark text-white fixed-top"> <!-- Add fixed-top class -->
         <div class="container d-flex justify-content-between align-items-center py-3">
             <div class="logo">
-                <img src="static/su3.jpeg" alt="Code O Clock Logo" class="img-fluid">
+                <img src="static/cit.png" alt="Code O Clock Logo" class="img-fluid">
             </div>
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -481,9 +564,9 @@
         <div class="overlay"></div>
         <div class="container text-center text-white">
             <div class="content">
-                <h1>Code O Clock</h1>
+                <h1>Code o Clock</h1>
                 <p>
-                    Code O Clock is the flagship event organized by the Department of Artificial Intelligence and Data Science. This dynamic platform is designed to bring together coding enthusiasts, developers, and innovators for a series of exciting and intellectually stimulating events. From coding workshops and hackathons to programming competitions, Code O Clock offers a unique opportunity for participants to enhance their skills, collaborate with peers, and solve real-world challenges.
+                    Code o Clock is the flagship event organized by the Department of Artificial Intelligence and Data Science. This dynamic platform is designed to bring together coding enthusiasts, developers, and innovators for a series of exciting and intellectually stimulating events. From coding workshops and hackathons to programming competitions, Code O Clock offers a unique opportunity for participants to enhance their skills, collaborate with peers, and solve real-world challenges.
                 </p>
                 <a href="#" class="btn btn-warning">Register Now</a>
             </div>
@@ -636,12 +719,16 @@
                 <div class="col-md-6" data-aos="fade-left">
                     <div class="map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.9026655143464!2d76.97835391532425!3d11.00181109217695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859f8b2d2a5ab%3A0xf6ef93e1b2d2a5ab!2sMahalakshmi%20Garden%2C%20Gandhi%20Park%2C%20Coimbatore%2C%20Tamil%20Nadu%20641001%2C%20India!5e0!3m2!1sen!2sus!4v1613566110227!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <div class="mt-3 text-center">
+                            <a href="intent://www.google.com/maps/place//data=!4m2!3m1!1s0x3ba858979f85136b:0xdd9ca28d3c37cf8a!11m1!4b1?entry=s&sa=X&ved=2ahUKEwjW3p--2NaHAxU27jgGHaHQLOkQ4kB6BAgpEAE#Intent;scheme=http;package=com.google.android.apps.maps;S.browser_fallback_url=https://www.google.com/maps/place//data%3D!4m2!3m1!1s0x3ba858979f85136b:0xdd9ca28d3c37cf8a!11m1!4b1%3Fentry%3Ds&sa%3DX&ved%3D2ahUKEwjW3p--2NaHAxU27jgGHaHQLOkQ4kB6BAgSEAA;end" class="btn btn-warning" target="_blank">Open in Google Maps</a>
+                        </div>
                     </div>
+                    
                     <div class="contact-info mt-4">
                         <p><strong>Get in touch</strong></p>
                         <p><i class="fas fa-envelope"></i> <a href="mailto:nmrohitraj1112@gmail.com">nmrohitraj1112@gmail.com</a></p>
                         <p><strong>Location</strong></p>
-                        <p><i class="fas fa-map-marker-alt"></i> Mahalakshmi garden, 2/48 COI, Tamil Nadu 641035 India</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Avinashi Rd, Civil Aerodrome Post, Coimbatore, Tamil Nadu-641014</p>
                     </div>
                 </div>
             </div>
@@ -675,7 +762,7 @@
                         Civil Aerodrome Post<br>
                         Coimbatore<br>
                         Tamil Nadu-641014<br>
-                        <a href="mailto:info@company.com" class="text-white">info@company.com</a>
+                        <a href="mailto:Codeoclock.cit@gmail.com" class="text-white">Codeoclock.cit@gmail.com</a>
                     </address>
                 </div>
             </div>
@@ -698,6 +785,11 @@
                         scrollTop: $(hash).offset().top - 70
                     }, 800);
                 }
+            });
+
+            // Toggle mobile menu
+            $('.navbar-toggler').on('click', function() {
+                $('#navbarNav').toggleClass('show');
             });
         });
     </script>
